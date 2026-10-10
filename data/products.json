@@ -1,1 +1,50 @@
-
+[
+    {
+        "id": 1,
+        "name": "Sign-up",
+        "description": "Creates a free AquaStream account in minutes using name, email, and password, or sign up with Google or Facebook.",
+        "image": "images/signup-page.png"
+    },
+    {
+        "id": 2,
+        "name": "Login",
+        "description": "Securely logs owners in to their station's account and pick up right where they left off.",
+        "image": "images/login-page.png"
+    },
+    {
+        "id": 3,
+        "name": "Dashboard",
+        "description": "Displays the station's total, pending, and completed orders at a glance, and a list of urgent orders that need delivery that day.",
+        "image": "images/dashboard-page.png"
+    },
+    {
+        "id": 4,
+        "name": "Create Order",
+        "description": "Logs a new order through a simple form that captures the customer's name, address, quantity of gallons, delivery date, and payment method.",
+        "image": "images/create-order-page.png"
+    },
+    {
+        "id": 5,
+        "name": "Orders List",
+        "description": "Displays all ongoing orders in a live list, where owners can delete or update the details of any order at any time.",
+        "image": "images/orders-list-page.png"
+    },
+    {
+        "id": 6,
+        "name": "Daily Sales",
+        "description": "Shows the station's daily total revenue, average sales, and order count.",
+        "image": "images/daily-sales-page.png"
+    },
+    {
+        "id": 7,
+        "name": "Weekly Sales",
+        "description": "Tracks order volume and revenue trends across weeks to help owners monitor growth over time.",
+        "image": "images/weekly-sales-page.png"
+    },
+    {
+        "id": 8,
+        "name": "History",
+        "description": "Stores every completed order so owners can look back at past deliveries.",
+        "image": "images/history-page.png"
+    }
+]
