@@ -1,1 +1,26 @@
-
+[
+    {
+        "id": 1,
+        "first_name": "Ember",
+        "last_name": "Martillan",
+        "email": "ember.martillan@example.com",
+        "user_db": "aquastream_martillan",
+        "created_at": "2026-06-08 08:47:55"
+    },
+    {
+        "id": 2,
+        "first_name": "Lorena",
+        "last_name": "Santos",
+        "email": "lorena.santos@example.com",
+        "user_db": "aquastream_santos",
+        "created_at": "2026-08-12 09:15:00"
+    },
+    {
+        "id": 3,
+        "first_name": "Max",
+        "last_name": "Aguas",
+        "email": "max.aguas@example.com",
+        "user_db": "aquastream_aguas",
+        "created_at": "2026-08-20 14:32:10"
+    }
+]
