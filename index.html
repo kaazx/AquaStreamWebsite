@@ -6,17 +6,32 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/favicon.png">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <header class="nav">
+            <div class="wrap">
+                <a class="logo" href="index.html" aria-label="AquaStream Home">
+                    <img src="images/logo.png" alt="AquaStream Logo">
+                </a>
+                <button class="hamburger-menu" aria-label="Toggle Menu">&#9776;</button>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="feature.html">Feature</a>
+                    <a href="product.html">Product</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+        </header>
         <main>
             <section class="tint">
-              <div>
-                <div>
-                    <p>Delivers A Steady, Continuous Flow of Water</p>
-                    <h1>Manage Your Water Refilling Business <span>With Ease</span></h1>
-                    <p>Log orders, track deliveries, and see your sales in one simple system.</p>
-                    <a>Discover More</a>
+              <div class="wrap grid2">
+                <div class="stack">
+                    <p class="eyebrow show">Delivers A Steady, Continuous Flow of Water</p>
+                    <h1 class="show" style="--d:.1s">Manage Your Water Refilling Business <span>With Ease</span></h1>
+                    <p class="lead show" style="--d:.2s">Log orders, track deliveries, and see your sales in one simple system.</p>
+                    <a class="btn show" style="--d:.3s" href="product.html">Discover More</a>
                 </div>
                 <img src="images/hero-splash.png" alt="Water splash">
               </div>
