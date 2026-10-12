@@ -7,23 +7,66 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/favicon.png">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <header class="nav">
+            <div class="wrap">
+                <a class="logo" href="index.html" aria-label="AquaStream Home">
+                    <img src="images/logo.png" alt="AquaStream Logo">
+                </a>
+                <button class="hamburger-menu" aria-label="Toggle Menu">&#9776;</button>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="feature.html" class="active">Feature</a>
+                    <a href="product.html">Product</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+        </header>
         <main>
             <section class="tint">
-                <div>
-                    <div>
-                        <p>Features</p>
-                        <h1>Powerful Features for a Smoother <span>Water Refill Business</span></h1>
-                        <p>AquaStream helps water refilling station owners manage orders, track deliveries, and grow their business, all in one simple system.</p>
+                <div class="wrap grid2">
+                    <div class="stack">
+                        <p class="eyebrow show">Features</p>
+                        <h1 class="show" style="--d:.1s">Powerful Features for a Smoother <span class="accent">Water Refill Business</span></h1>
+                        <p class="lead show" style="--d:.2s">AquaStream helps water refilling station owners manage orders, track deliveries, and grow their business, all in one simple system.</p>
                     </div>
-                    <div position:relative;padding-bottom:48px">
-                        <img class="art wide" src="images/features.png" alt="Dashboard on desktop">
+                    <div class="show" style="--d:.2s;position:relative;padding-bottom:48px">
+                        <img class="hero wide" src="images/features.png" data-ph="Mockups" alt="Mockups on Desktop and Tablet">
                     </div>
                 </div>
             </section>
+            <section style="padding-top:0">
+                <div class="wrap">
+                    <div class="feats" data-features="cards" style="margin-top:0"></div>
+                </div>
+            </section>
         </main>
+        <footer>
+            <div class="wave">
+                <svg viewBox="0 0 1440 56" preserveAspectRatio="none">
+                    <path fill="#1856AB" d="M0 28C240 0 480 56 720 28s480-28 720 0v28H0z"/>
+                </svg>
+            </div>
+            <div class="fin">
+                <div class="wrap">
+                    <div class="soc">
+                        <a href="https://www.facebook.com/share/1CFapo7KM9/?mibextid=wwXIfr" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/aquastream.web?vrfl=OXBncWd4NnViMTFv" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+                        <a href="mailto:aquastream.web@gmail.com" aria-label="Email"><img src="images/email.png" alt="Email"></a>
+                        <a href="https://www.tiktok.com/@aquastream.web?_r=1&_t=ZS-9AUb11NRIZE" aria-label="TikTok"><img src="images/tiktok.png" alt="TikTok"></a>
+                    </div>
+                    <div class="footer-brand">
+                        <p><b>Delivers A Steady, Continuous Flow of Water</b><br><small>&copy; 2026 AquaStream. All Rights Reserved.</small></p>
+                        <a class="logo" href="index.html" aria-label="AquaStream Home">
+                            <img src="images/footer-logo.png" alt="AquaStream Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <script src="js/main.js" defer></script>
     </body>
 </html>
