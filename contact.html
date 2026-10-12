@@ -1,1 +1,110 @@
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Contact Us | AquaStream</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="nav">
+            <div class="wrap">
+                <a class="logo" href="index.html" aria-label="AquaStream Home">
+                    <img src="images/logo.png" alt="AquaStream Logo">
+                </a>
+                <button class="hamburger-menu" aria-label="Toggle Menu">&#9776;</button>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="feature.html">Feature</a>
+                    <a href="product.html">Product</a>
+                    <a href="contact.html" class="active">Contact Us</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="tint">
+                <div class="wrap grid2">
+                    <div class="stack">
+                        <p class="eyebrow show">Get in Touch</p>
+                        <h1 class="show" style="--d:.1s">We'd Love to <span class="accent">Hear From You</span></h1>
+                        <p class="lead show" style="--d:.2s">Have questions, feedback, or need assistance? Fill out the form and our team will get back to you as soon as possible.</p>
+                    </div>
+                    <img class="hero wide show" style="--d:.2s" src="images/hero-splash.png" alt="Water Splash" data-ph="Contact Page: Hero Image">
+                </div>
+            </section>
+            <section style="padding-top:0">
+                <div class="wrap contact">
+                    <form class="card cform show" id="contact-form" novalidate>
+                        <h3>Send Us a Message</h3>
+                        <label for="name">Customer Name *</label>
+                        <input id="name" name="name" placeholder="Enter your full name" required>
+                        <label for="email">Email Address *</label>
+                        <input id="email" name="email" type="email" placeholder="Enter your email address" required>
+                        <label for="msg">Message *</label>
+                        <textarea id="msg" name="msg" placeholder="Type your message here..." required></textarea>
+                        <label for="date">Date (optional)</label>
+                        <input id="date" name="date" type="date">
+                        <button class="btn" type="submit">Submit</button>
+                        <p class="note" role="status"></p>
+                    </form>
+                    <aside class="card show" style="--d:.1s">
+                        <h3>Our Information</h3>
+                        <div class="info">
+                            <span class="ico" data-ic="pin"></span>
+                            <p><b>Address</b>123 Do St., Barangay Sample, Angeles City, Pampanga, Philippines 2009</p>
+                        </div>
+                        <div class="info">
+                            <span class="ico" data-ic="phone"></span>
+                            <p><b>Contact Number</b>+63 123 457 7890<br>(123) 271 5261</p>
+                        </div>
+                        <div class="info">
+                            <span class="ico" data-ic="mail"></span>
+                            <p><b>Email Address</b>aquastream.web@gmail.com</p>
+                        </div>
+                        <div class="info">
+                            <span class="ico" data-ic="clock"></span>
+                            <p><b>Business Hours</b>Monday - Saturday: 7:00 AM - 7:00 PM<br>Sunday: 8:00 AM - 5:00 PM</p>
+                        </div>
+                        <h3 style="font-size:21px;margin:32px 0 16px">Follow Us</h3>
+                        <div data-social></div>
+                    </aside>
+                </div>
+            </section>
+            <section class="contact-msg">
+                <div class="wrap">
+                    <p class="eyebrow">Better Management, Quality Service</p>
+                    <h2>We're Here to Help!</h2>
+                    <p class="lead" style="margin:16px auto 0">Your satisfaction is our priority.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wave">
+                <svg viewBox="0 0 1440 56" preserveAspectRatio="none">
+                    <path fill="#1856AB" d="M0 28C240 0 480 56 720 28s480-28 720 0v28H0z"/>
+                </svg>
+            </div>
+            <div class="fin">
+                <div class="wrap">
+                    <div class="soc">
+                        <a href="https://www.facebook.com/share/1CFapo7KM9/?mibextid=wwXIfr" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/aquastream.web?vrfl=OXBncWd4NnViMTFv" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+                        <a href="mailto:aquastream.web@gmail.com" aria-label="Email"><img src="images/email.png" alt="Email"></a>
+                        <a href="https://www.tiktok.com/@aquastream.web?_r=1&_t=ZS-9AUb11NRIZE" aria-label="TikTok"><img src="images/tiktok.png" alt="TikTok"></a>
+                    </div>
+                    <div class="footer-brand">
+                        <p><b>Delivers A Steady, Continuous Flow of Water</b><br><small>&copy; 2026 AquaStream. All Rights Reserved.</small></p>
+                        <a class="logo" href="index.html" aria-label="AquaStream Home">
+                            <img src="images/footer-logo.png" alt="AquaStream Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/main.js" defer></script>
+    </body>
+</html>
