@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Sign Up | AquaStream</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            body {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 24px;
+                background: var(--ice);
+            }
+            .container {
+                display: flex;
+                width: 100%;
+                max-width: 980px;
+                min-height: 620px;
+                background: #fff;
+                border-radius: 24px;
+                overflow: hidden;
+                box-shadow: var(--sh);
+            }
+            .left-panel {
+                flex: 1;
+                background: linear-gradient(160deg, var(--blue), var(--sky));
+            }
+            .left-panel img { width: 100%; height: 100%; object-fit: cover; }
+            .right-panel {
+                flex: 1;
+                padding: 40px 44px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .right-panel h2 { margin-bottom: 6px; }
+            .login-link { margin-bottom: 22px; color: var(--mut); }
+            .login-link a, .terms a { font-weight: 600; }
+            #message { margin: 0 0 16px; }
+            .row { display: flex; gap: 12px; }
+            .row input { flex: 1; min-width: 0; }
+            .cform input:not([type="checkbox"]) { margin-bottom: 12px; }
+            .cform .terms {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin: 4px 0 0;
+                font-weight: 400;
+            }
+            .cform .terms input { width: auto; padding: 0; }
+            .divider { display: flex; align-items: center; gap: 12px; margin: 20px 0 14px; color: var(--mut); }
+            .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: #bcd6ee; }
+            .social-buttons { display: flex; gap: 12px; }
+            .social-buttons a {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 11px;
+                border: 1px solid #bcd6ee;
+                border-radius: 12px;
+                transition: .3s var(--ease);
+            }
+            .social-buttons a:hover { background: var(--ice); }
+            .social-buttons img { width: 20px; height: 20px; }
+            @media (max-width: 760px) {
+                .left-panel { display: none; }
+                .right-panel { padding: 32px 24px; }
+                .row { flex-direction: column; gap: 0; }
+            }
+        </style>
+    </head>
+    <body>
 
+    <div class="container">
+
+        <div class="left-panel">
+            <img src="images/signup_img.jpg" alt="AquaStream" onerror="this.style.display='none'">
+        </div>
+
+        <div class="right-panel">
+            <h2 class="accent">Create an Account</h2>
+            <p class="login-link">Already have an account? <a class="accent" href="#">Log in</a></p>
+
+            <p id="message" class="note" role="alert" hidden></p>
+
+            <form id="signup-form" class="cform" novalidate>
+                <div class="row">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                </div>
+
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Create password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
+
+                <label class="terms">
+                    <input type="checkbox" name="terms" required>
+                    <span>I agree to the <a class="accent" href="#">Terms &amp; Conditions</a></span>
+                </label>
+
+                <button type="submit" class="btn">Create account</button>
+
+                <div class="divider"><span>Or register with</span></div>
+
+                <div class="social-buttons">
+                    <a href="#">
+                        <img src="images/google-icon.png" alt="" onerror="this.style.display='none'"> Google
+                    </a>
+
+                    <a href="#">
+                        <img src="images/facebook-icon.png" alt="" onerror="this.style.display='none'"> Facebook
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("signup-form");
+        const box = document.getElementById("message");
+
+        const show = (text, isError) => {
+            box.textContent = text;
+            box.className = "note" + (isError ? " err" : "");
+            box.hidden = false;
+        };
+
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+
+            const data = new FormData(form);
+            const required = ["first_name", "last_name", "email", "password", "confirm_password"];
+            const empty = required.some(k => !data.get(k).trim());
+
+            if (empty || !form.email.checkValidity()) {
+                show("Please fill in your name and a valid email address.", true);
+            } else if (data.get("password") !== data.get("confirm_password")) {
+                show("Passwords do not match!", true);
+            } else if (data.get("password").length < 6) {
+                show("Password must be at least 6 characters.", true);
+            } else if (!form.terms.checked) {
+                show("Please agree to the Terms & Conditions.", true);
+            } else {
+                show("Thanks, " + data.get("first_name").trim() + "! AquaStream sign-up is opening soon. We'll email you when your account is ready.", false);
+                form.reset();
+            }
+        });
+    </script>
+    </body>
+</html>
