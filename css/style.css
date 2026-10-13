@@ -12,9 +12,6 @@
     box-sizing:border-box;
     margin:0
 }
-html {
-    scroll-behavior:smooth
-}
 body {
     font:400 15px/1.6 "League Spartan",system-ui,sans-serif;
     color:var(--ink);
@@ -131,12 +128,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
 .logo {
     display:flex;
     align-items:center;
-    gap:8px;
-    font-weight:700;
-    font-size:21px;
-    color:var(--blue)
 }
-.logo svg,.logo img {
+.logo img {
     width:60px;
     height:60px;
     object-fit:contain
@@ -225,7 +218,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
     align-items:center;
     justify-content:space-between;
     gap:32px;
-    background:linear-gradient(120deg,var(--ice),var(--sky));
     border-radius:24px;
     padding:48px
 }
@@ -267,8 +259,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
     aspect-ratio:16/9;
     background:var(--ink);
     border-radius:var(--r);
-    display:grid;
-    place-items:center;
     overflow:hidden
 }
 .video iframe {
@@ -277,16 +267,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
     width:100%;
     height:100%;
     border:0
-}
-.play {
-    width:72px;
-    height:72px;
-    border-radius:50%;
-    background:#fff;
-    color:var(--blue);
-    display:grid;
-    place-items:center;
-    font-size:28px
 }
 .users {
     display:grid;
@@ -399,39 +379,22 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
     gap:16px
 }
 .soc img {
-    width:20px;
-    height:20px;
+    width:40px;
+    height:40px;
     object-fit:contain
 }
-.soc a,.fin .soc a {
-    background:none;
-    width:auto;
-    height:auto
-}
-.soc img {
-    width:40px;
-    height:40px
-}
 .soc a {
-    width:auto;
-    height:auto;
-    border-radius:50%;
-    background:none;
     display:grid;
     place-items:center;
+    border-radius:50%;
     transition:.3s var(--ease)
 }
 .soc a:hover {
-    transform:translateY(-3px);
-    background:none
+    transform:translateY(-3px)
 }
 aside .soc a {
     background:var(--blue);
-    border-radius:50%;
     box-shadow:0 0 0 2px var(--blue)
-}
-aside .soc a:hover {
-    background:var(--blue)
 }
 .contact-msg {
     text-align:center;
@@ -476,9 +439,6 @@ main:has(.contact-msg)~footer {
 .fin small {
     font-size:15px;
     opacity:.8
-}
-.fin .logo {
-    color:#fff
 }
 .fin .logo {
     width:76px;
